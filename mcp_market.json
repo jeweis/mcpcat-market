@@ -380,6 +380,62 @@
         "devops"
       ],
       "homepage": "https://github.com/modelcontextprotocol/server-gitlab"
+    },
+    {
+      "id": "designcomputer-mysql-mcp-server",
+      "name": "MySQL MCP Server (designcomputer)",
+      "description": "MySQL MCP server by designcomputer for secure MySQL access.",
+      "type": "stdio",
+      "install": {
+        "command": "uvx",
+        "args": [
+          "--from",
+          "mysql-mcp-server",
+          "mysql_mcp_server"
+        ]
+      },
+      "defaults": {
+        "enabled": true,
+        "require_auth": false,
+        "timeout": 30,
+        "env": {},
+        "headers": {}
+      },
+      "fields": {
+        "env": [
+          {
+            "key": "MYSQL_HOST",
+            "label": "MySQL Host",
+            "placeholder": "localhost"
+          },
+          {
+            "key": "MYSQL_PORT",
+            "label": "MySQL Port",
+            "placeholder": "3306"
+          },
+          {
+            "key": "MYSQL_USER",
+            "label": "MySQL User",
+            "placeholder": "your_username"
+          },
+          {
+            "key": "MYSQL_PASSWORD",
+            "label": "MySQL Password",
+            "placeholder": "your_password"
+          },
+          {
+            "key": "MYSQL_DATABASE",
+            "label": "MySQL Database",
+            "placeholder": "your_database"
+          }
+        ],
+        "headers": []
+      },
+      "tags": [
+        "database",
+        "mysql"
+      ],
+      "homepage": "https://github.com/designcomputer/mysql_mcp_server"
     }
   ]
 }
