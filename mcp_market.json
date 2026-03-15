@@ -382,16 +382,15 @@
       "homepage": "https://github.com/modelcontextprotocol/server-gitlab"
     },
     {
-      "id": "designcomputer-mysql-mcp-server",
-      "name": "MySQL MCP Server (designcomputer)",
-      "description": "MySQL MCP server by designcomputer for secure MySQL access.",
+      "id": "benborla-mcp-server-mysql",
+      "name": "mcp-server-mysql (benborla)",
+      "description": "Read-only MySQL MCP server by benborla for schema inspection and SQL queries.",
       "type": "stdio",
       "install": {
-        "command": "uvx",
+        "command": "npx",
         "args": [
-          "--from",
-          "mysql-mcp-server",
-          "mysql_mcp_server"
+          "-y",
+          "@benborla29/mcp-server-mysql"
         ]
       },
       "defaults": {
@@ -406,7 +405,7 @@
           {
             "key": "MYSQL_HOST",
             "label": "MySQL Host",
-            "placeholder": "localhost"
+            "placeholder": "127.0.0.1"
           },
           {
             "key": "MYSQL_PORT",
@@ -416,17 +415,32 @@
           {
             "key": "MYSQL_USER",
             "label": "MySQL User",
-            "placeholder": "your_username"
+            "placeholder": "root"
           },
           {
-            "key": "MYSQL_PASSWORD",
+            "key": "MYSQL_PASS",
             "label": "MySQL Password",
             "placeholder": "your_password"
           },
           {
-            "key": "MYSQL_DATABASE",
+            "key": "MYSQL_DB",
             "label": "MySQL Database",
             "placeholder": "your_database"
+          },
+          {
+            "key": "ALLOW_INSERT_OPERATION",
+            "label": "Allow INSERT",
+            "placeholder": "false"
+          },
+          {
+            "key": "ALLOW_UPDATE_OPERATION",
+            "label": "Allow UPDATE",
+            "placeholder": "false"
+          },
+          {
+            "key": "ALLOW_DELETE_OPERATION",
+            "label": "Allow DELETE",
+            "placeholder": "false"
           }
         ],
         "headers": []
@@ -435,7 +449,7 @@
         "database",
         "mysql"
       ],
-      "homepage": "https://github.com/designcomputer/mysql_mcp_server"
+      "homepage": "https://github.com/benborla/mcp-server-mysql"
     }
   ]
 }
